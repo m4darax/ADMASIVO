@@ -1,5 +1,5 @@
 # ADMASIVO
-Creación de usuarios en Windows Server 2013
+Creación de usuarios en Windows Server 2012
 
 HOLA.
 
