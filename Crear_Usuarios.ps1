@@ -1,13 +1,13 @@
 ""
 Write-Host *********************************************************************************************
 Write-Host *********************************************************************************************
-Write-Host "          Script para crear usuarios de forma masiva en el directorio activo AUNA.PVT "
+Write-Host "          Script para crear usuarios de forma masiva en el directorio activo
            
 Write-Host *********************************************************************************************
 Write-Host *********************************************************************************************
 ""
 Import-Module ActiveDirectory
-[String]$Ruta = Read-Host "Ingrese la ruta donde est· el archivo csv (Por Ejemplo C:\archivocsv.csv)"
+[String]$Ruta = Read-Host "Ingrese la ruta donde est√° el archivo csv (Por Ejemplo C:\archivocsv.csv)"
 $dominio=(Get-ADDomain).DNSRoot
 Import-Csv -Path $Ruta | foreach-object {
 $UPN = $_.Cuenta + "@" + "$dominio"
@@ -33,12 +33,12 @@ catch {
 foreach ($usuario in $listado) {
 $correo = $usuario.Cuenta
 if (Get-ADUser -Filter {SamAccountName -eq $correo}){
-Write-Host ì$correo...Si existe en ADî
-Write-Output ì$correo,Si existe en ADî | Out-File .\resultado.txt -Append
+Write-Host ‚Äú$correo...Si existe en AD‚Äù
+Write-Output ‚Äú$correo,Si existe en AD‚Äù | Out-File .\resultado.txt -Append
 }
 else {
-Write-Host -BackgroundColor Red -ForegroundColor White ì$correo....No existe en ADî
-Write-Output ì$correo,No existe en ADî | Out-File .\resultadoerror.txt -Append
+Write-Host -BackgroundColor Red -ForegroundColor White ‚Äú$correo....No existe en AD‚Äù
+Write-Output ‚Äú$correo,No existe en AD‚Äù | Out-File .\resultadoerror.txt -Append
 }
 $listado = $Ruta
 }
