@@ -1,5 +1,5 @@
 # ADMASIVO
-Creating users in Windows Server 2012
+Mass user creation Windows Server 2012
 
 With the Script Validar_Usuario.ps1 what it does is to make a query to the AD and verifies that the user does not exist.
 
