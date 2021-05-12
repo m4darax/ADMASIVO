@@ -9,5 +9,9 @@ Con el Script Crear_Usuarios.ps1 lo que realiza es la creación de usuarios en l
 
 los datos que requieren, Nombre, Correo, DNI… , la información de que datos se necesita lo puede visualizar en el archivo Usuario.xlsx.
 
-
+Uso:
+Ejecutar los scripts le pedira los archivo.
+Ejemplo:
+C:\USUARIOS.xlsx
+y luego enter, empezara la carga masiva de usuarios.
 
